@@ -21,14 +21,16 @@ Bucket) is a new queueing discipline which attempts to address the
 weaknesses of current CBQ implementation.
 
 %description -l pl
-HTB.init jest prostym skryptem umo¿liwiaj±cym konfiguracjê HTB w
-Linuksie 2.4 i 2.6.
+HTB.init jest prostym skryptem umo¿liwiaj±cym ³atw± konfiguracjê
+kontroli ruchu HTB w Linuksie 2.4 i 2.6. HTB (Hierarchical Token
+Bucket) to nowu algorytm kolejkowania próbuj±cy wyeliminowaæ slabo¶ci
+aktualnej implementacji CBQ.
 
 %prep
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d}
+install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d,/etc/sysconfig/htb}
 
 install %{SOURCE0} $RPM_BUILD_ROOT/etc/rc.d/init.d/%{name}
 
