@@ -54,5 +54,4 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc e*
-%attr(754,root,root) %{_initrddir}/%{name}
 %attr(754,root,root) %{_initrddir}/htb
