@@ -1,3 +1,6 @@
+#
+# TODO:
+# - added example for HTB to /etc/sysconfig/htb.example or whatever
 Summary:	Shell script for setting up HTB
 Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê HTB
 Name:		htb.init
