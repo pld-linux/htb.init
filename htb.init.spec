@@ -2,12 +2,12 @@ Summary:	Shell script for setting up HTB
 Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê HTB
 Name:		htb.init
 Version:	0.8.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/htbinit/%{name}-v%{version}
 # NoSource0-md5:	1713d9a4941120235cb0721ceba6493b
-Source1:        http://dl.sourceforge.net/htbinit/htb-lartc.tar.gz
+Source1:	http://dl.sourceforge.net/htbinit/htb-lartc.tar.gz
 # Source1-md5:	1a6e6515abfe2a48744b36b7ff9af94d
 Patch0:		%{name}-lsb.patch
 URL:		http://www.sourceforge.net/projects/htbinit/
@@ -38,7 +38,7 @@ install %SOURCE0 .
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb}
 
-install %{name}-v%{version} $RPM_BUILD_ROOT%{_initrddir}/htb
+install %{SOURCE0} $RPM_BUILD_ROOT%{_initrddir}/htb
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %post
 /sbin/chkconfig --add htb
 
-%postun
+%preun
 if [ "$1" = "0" ]; then
 	/sbin/chkconfig --del htb
 fi
