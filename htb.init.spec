@@ -33,7 +33,7 @@ tar -zxvf %{SOURCE1} -C examples
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb,/var/cache/htb.init}
+install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb}
 
 install %{SOURCE0} $RPM_BUILD_ROOT%{_initrddir}/%{name}
 
@@ -52,5 +52,3 @@ fi
 %defattr(644,root,root,755)
 %doc examples
 %attr(754,root,root) %{_initrddir}/%{name}
-%dir /etc/sysconfig/htb
-%dir /var/cache/htb.init
