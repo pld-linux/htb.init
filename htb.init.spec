@@ -35,20 +35,20 @@ aktualnej implementacji CBQ.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb}
 
-install %{SOURCE0} $RPM_BUILD_ROOT%{_initrddir}/%{name}
+install %{SOURCE0} $RPM_BUILD_ROOT%{_initrddir}/htb
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/sbin/chkconfig --add htb.init
+/sbin/chkconfig --add htb
 
 %postun
 if [ "$1" = "0" ]; then
-	/sbin/chkconfig --del htb.init
+	/sbin/chkconfig --del htb
 fi
 
 %files
 %defattr(644,root,root,755)
 %doc *
-%attr(754,root,root) %{_initrddir}/%{name}
+%attr(754,root,root) %{_initrddir}/htb
