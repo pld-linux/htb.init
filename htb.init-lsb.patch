@@ -1,0 +1,21 @@
+--- htb.init-v0.8.5~	Wed Jun  9 07:08:00 2004
++++ htb.init-v0.8.5	Wed Jun  9 07:08:00 2004
+@@ -997,12 +997,16 @@
+ 	htb_show -s
+ 	;;
+ 
+-restart)
++status)
++	;;
++
++restart|reload|force-reload)
+ 	shift
+ 	$0 stop
+ 	$0 start "$@"
+ 	;;
+ 
+ *)
+-	echo "Usage: `basename $0` {start|compile|stop|restart|timecheck|list|stats}"
++	echo "Usage: `basename $0` {start|compile|stop|restart|reload|force-reload|status|timecheck|list|stats}"
++	exit 3
+ esac
