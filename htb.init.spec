@@ -29,7 +29,7 @@ Bucket) to nowu algorytm kolejkowania próbuj±cy wyeliminowaæ slabo¶ci
 aktualnej implementacji CBQ.
 
 %prep
-tar -zxvf %{SOURCE1} -C examples
+%setup -q -T -c -a1
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -50,5 +50,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc examples
+%doc *
 %attr(754,root,root) %{_initrddir}/%{name}
