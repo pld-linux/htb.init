@@ -26,8 +26,8 @@ weaknesses of current CBQ implementation.
 %description -l pl
 HTB.init jest prostym skryptem umo¿liwiaj±cym ³atw± konfiguracjê
 kontroli ruchu HTB w Linuksie 2.4 i 2.6. HTB (Hierarchical Token
-Bucket) to nowu algorytm kolejkowania próbuj±cy wyeliminowaæ slabo¶ci
-aktualnej implementacji CBQ.
+Bucket) to nowu algorytm kolejkowania próbuj±cy wyeliminowaæ 
+s³abo¶ci aktualnej implementacji CBQ.
 
 %prep
 %setup -q -T -c -a1
