@@ -6,7 +6,7 @@ Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/htbinit/%{name}-v%{version}
-# NoSource0-md5:	1713d9a4941120235cb0721ceba6493b
+# Source0-md5:	1713d9a4941120235cb0721ceba6493b
 Source1:	http://dl.sourceforge.net/htbinit/htb-lartc.tar.gz
 # Source1-md5:	1a6e6515abfe2a48744b36b7ff9af94d
 Patch0:		%{name}-lsb.patch
