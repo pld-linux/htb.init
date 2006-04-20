@@ -11,9 +11,9 @@ Source1:	http://dl.sourceforge.net/htbinit/htb-lartc.tar.gz
 # Source1-md5:	1a6e6515abfe2a48744b36b7ff9af94d
 Patch0:		%{name}-lsb.patch
 URL:		http://www.sourceforge.net/projects/htbinit/
-PreReq:		rc-scripts
 Requires(post,preun):	/sbin/chkconfig
 Requires:	iproute2
+Requires:	rc-scripts
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,14 +31,14 @@ aktualnej implementacji CBQ.
 
 %prep
 %setup -q -T -c -a1
-install %SOURCE0 .
+install %{SOURCE0} %{name}
 %patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb}
 
-install %{SOURCE0} $RPM_BUILD_ROOT%{_initrddir}/htb
+install %{name} $RPM_BUILD_ROOT%{_initrddir}/htb
 
 %clean
 rm -rf $RPM_BUILD_ROOT
