@@ -31,14 +31,14 @@ aktualnej implementacji CBQ.
 
 %prep
 %setup -q -T -c -a1
-install %{SOURCE0} %{name}
+install %{SOURCE0} .
 %patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb}
 
-install %{name} $RPM_BUILD_ROOT%{_initrddir}/htb
+install %{name}-v%{version} $RPM_BUILD_ROOT%{_initrddir}/htb
 
 %clean
 rm -rf $RPM_BUILD_ROOT
