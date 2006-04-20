@@ -5,11 +5,12 @@ Version:	0.8.5
 Release:	3
 License:	GPL
 Group:		Networking/Utilities
-Source0:	%{name}-v%{version}
-# NoSource0-md5:	57ccb8c6a3d650deca0f51de728bb9c9
+Source0:	http://dl.sourceforge.net/htbinit/%{name}-v%{version}
+# NoSource0-md5:	1713d9a4941120235cb0721ceba6493b
 Source1:	http://dl.sourceforge.net/htbinit/htb-lartc.tar.gz
 # Source1-md5:	1a6e6515abfe2a48744b36b7ff9af94d
 Patch0:		%{name}-lsb.patch
+Patch1:		%{name}-find.patch
 URL:		http://www.sourceforge.net/projects/htbinit/
 Requires(post,preun):	/sbin/chkconfig
 Requires:	iproute2
@@ -33,6 +34,7 @@ aktualnej implementacji CBQ.
 %setup -q -T -c -a1
 install %{SOURCE0} .
 %patch0 -p0
+%patch1 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
