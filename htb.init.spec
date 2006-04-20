@@ -2,11 +2,11 @@ Summary:	Shell script for setting up HTB
 Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê HTB
 Name:		htb.init
 Version:	0.8.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://dl.sourceforge.net/htbinit/%{name}-v%{version}
-# NoSource0-md5:	1713d9a4941120235cb0721ceba6493b
+Source0:	%{name}-v%{version}
+# NoSource0-md5:	57ccb8c6a3d650deca0f51de728bb9c9
 Source1:	http://dl.sourceforge.net/htbinit/htb-lartc.tar.gz
 # Source1-md5:	1a6e6515abfe2a48744b36b7ff9af94d
 Patch0:		%{name}-lsb.patch
@@ -26,8 +26,8 @@ weaknesses of current CBQ implementation.
 %description -l pl
 HTB.init jest prostym skryptem umo¿liwiaj±cym ³atw± konfiguracjê
 kontroli ruchu HTB w Linuksie 2.4 i 2.6. HTB (Hierarchical Token
-Bucket) to nowy algorytm kolejkowania próbuj±cy wyeliminowaæ 
-s³abo¶ci aktualnej implementacji CBQ.
+Bucket) to nowy algorytm kolejkowania próbuj±cy wyeliminowaæ s³abo¶ci
+aktualnej implementacji CBQ.
 
 %prep
 %setup -q -T -c -a1
