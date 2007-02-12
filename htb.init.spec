@@ -1,5 +1,5 @@
 Summary:	Shell script for setting up HTB
-Summary(pl):	Skrypt umo¿liwiaj±cy prost± konfiguracjê HTB
+Summary(pl.UTF-8):   Skrypt umoÅ¼liwiajÄ…cy prostÄ… konfiguracjÄ™ HTB
 Name:		htb.init
 Version:	0.8.5
 Release:	3
@@ -24,10 +24,10 @@ setup of HTB-based traffic control on Linux. HTB (Hierachical Token
 Bucket) is a new queueing discipline which attempts to address the
 weaknesses of current CBQ implementation.
 
-%description -l pl
-HTB.init jest prostym skryptem umo¿liwiaj±cym ³atw± konfiguracjê
+%description -l pl.UTF-8
+HTB.init jest prostym skryptem umoÅ¼liwiajÄ…cym Å‚atwÄ… konfiguracjÄ™
 kontroli ruchu HTB w Linuksie 2.4 i 2.6. HTB (Hierarchical Token
-Bucket) to nowy algorytm kolejkowania próbuj±cy wyeliminowaæ s³abo¶ci
+Bucket) to nowy algorytm kolejkowania prÃ³bujÄ…cy wyeliminowaÄ‡ sÅ‚aboÅ›ci
 aktualnej implementacji CBQ.
 
 %prep
