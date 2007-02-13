@@ -1,5 +1,5 @@
 Summary:	Shell script for setting up HTB
-Summary(pl.UTF-8):   Skrypt umożliwiający prostą konfigurację HTB
+Summary(pl.UTF-8):	Skrypt umożliwiający prostą konfigurację HTB
 Name:		htb.init
 Version:	0.8.5
 Release:	3
