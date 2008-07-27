@@ -2,7 +2,7 @@ Summary:	Shell script for setting up HTB
 Summary(pl.UTF-8):	Skrypt umożliwiający prostą konfigurację HTB
 Name:		htb.init
 Version:	0.8.5
-Release:	3
+Release:	4
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://dl.sourceforge.net/htbinit/%{name}-v%{version}
