@@ -38,9 +38,9 @@ install %{SOURCE0} .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_initrddir},/etc/sysconfig/htb}
+install -d $RPM_BUILD_ROOT{/etc/rc.d/init.d,/etc/sysconfig/htb}
 
-install %{name}-v%{version} $RPM_BUILD_ROOT%{_initrddir}/htb
+install %{name}-v%{version} $RPM_BUILD_ROOT/etc/rc.d/init.d/htb
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,5 +56,5 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc e*
-%attr(754,root,root) %{_initrddir}/htb
+%attr(754,root,root) /etc/rc.d/init.d/htb
 %dir /etc/sysconfig/htb
