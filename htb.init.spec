@@ -33,8 +33,8 @@ aktualnej implementacji CBQ.
 %prep
 %setup -q -T -c -a1
 install %{SOURCE0} .
-%patch0 -p0
-%patch1 -p0
+%patch -P0 -p0
+%patch -P1 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
